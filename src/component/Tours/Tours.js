@@ -1,18 +1,19 @@
 import './Tours.css';
-import data from '../../data/db.json'
-function Tour(){
+
+function Tour(props){
+    console.log(props)
     return(
 <div class='tours'>
-        {data.map((moh)=>(
+        
             <div class="card">
-            <img class='img' src={moh.image} alt="image not found" />
+            <img class='img' src={props.img} alt="image not found" />
             <div class="container">
-            <h1>{moh.name}</h1> 
-            <h3>{moh.info}</h3> 
-            <h4>{moh.price}</h4>
+            <h1>{props.name}</h1> 
+            <h3>{props.info}</h3> 
+            <h4>{props.price}</h4>
             </div>
             </div>
-        ))}
+       
 </div>
     )
 }
