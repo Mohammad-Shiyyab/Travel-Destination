@@ -1,0 +1,35 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  .allul {
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  .active{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .nav{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    background-color: #be3144;
+    font-size: 2rem;
+  }
