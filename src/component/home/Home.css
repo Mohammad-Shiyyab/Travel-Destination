@@ -1,0 +1,9 @@
+.divtour{
+    display: flex;
+    flex-direction: row;
+    max-width: 70%;
+flex-wrap: wrap;
+gap: 2rem;
+max-height: 100%;
+
+}
