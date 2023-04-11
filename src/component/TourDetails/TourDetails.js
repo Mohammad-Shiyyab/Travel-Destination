@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Data from "../../data/db.json"
 
 function TourDetails(){
     const [details,setDetails] = useState(false)
     const {id} = useParams();
     const moreInfo = Data.find((tour) => id===tour.id);
-
-    function showInfo(){
-        setDetails(!details)
+    const navigate = useNavigate()
+    const showInfo =() =>{
+        setDetails(navigate('/'))
     }
+    console.log(showInfo)
 
 return(
     <>
@@ -19,8 +20,8 @@ return(
             <div class="container">
             <h1>{moreInfo.name}</h1> 
             <p>
-                <span>{moreInfo.info}</span>
-                <span role="button" onClick={showInfo}>{showInfo ? 'show less' : 'show more'}</span>
+                <span>{moreInfo.info}</span><br></br>
+                <button  onClick={showInfo}>{showInfo ? 'show less' : 'show more'}</button>
                 
             </p>
             <p>{moreInfo.price}</p>
